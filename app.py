@@ -6,12 +6,12 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='How to use callbacks'
-tabtitle = 'xkcd'
-list_of_options=['box plot', 'correlation', 'git commit', 'scatterplot']
-list_of_images=['outlier.png', 'correlation.png', 'gitcommit.jpg', 'scatterplot.png', 'good_code.png']
-sourceurl = 'https://xkcd.com/'
-githublink = 'https://github.com/austinlasseter/dash-callbacks-radio'
+myheading1='Where do you want to go?'
+tabtitle = 'Travel'
+list_of_options=['San Francisco', 'Patagonia', 'Sydney', 'Cape Town', 'Paris']
+list_of_images=['sf.jpeg', 'patagonia.jpeg', 'sydney.jpg', 'capetown.jpg', 'paris.jpg', 'airplane.jpg']
+sourceurl = 'https://www.tripadvisor.com/'
+githublink = 'https://github.com/mgeisreiter/dash-callbacks-radio'
 
 
 ########## Set up the chart
@@ -33,8 +33,9 @@ app.layout = html.Div(children=[
                 {'label':list_of_options[1], 'value':list_of_images[1]},
                 {'label':list_of_options[2], 'value':list_of_images[2]},
                 {'label':list_of_options[3], 'value':list_of_images[3]},
+                {'label':list_of_options[4], 'value':list_of_images[4]},
                 ],
-        value=list_of_images[4],
+        value=list_of_images[5],
         ),
     html.Div(id='your_output_here', children=''),
     html.Br(),
