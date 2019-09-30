@@ -14,7 +14,7 @@ list_of_meal_options = ['Fast Casual', 'Sit Down', 'Surprise']
 list_of_restaurants= {'Breakfast': {'Fast Casual': "Call Your Mother Deli", 'Sit Down': "Ted's Bulliten", 'Surprise':'Unconventional Diner'},
                       'Lunch': {'Fast Casual': "Sweetgreen", 'Sit Down': "Logan Tavern", 'Surprise':'Bluestone Lane'},
                       'Dinner': {'Fast Casual': "Chipotle", 'Sit Down': "Maydan", 'Surprise':'Taqueria Nacional'}},
-list_of_images=['breakfast.jpeg', 'lunch.jpeg', 'dinner.jpg']
+list_of_images=['breakfast.jpg', 'lunch.jpg', 'dinner.jpg', 'fork.jpg]
 sourceurl = 'https://www.yelp.com/'
 githublink = 'https://github.com/mgeisreiter/dash-callbacks-radio'
 
@@ -38,7 +38,7 @@ app.layout = html.Div(children=[
                 {'label':list_of_meal_options[1], 'value':list_of_restaurants[1]},
                 {'label':list_of_meal_options[2], 'value':list_of_restaurants[2]},
                 ],
-        value=list_of_images[5],
+        value=list_of_images[3],
         ),
     html.Div(id='your_output_here', children=''),
     html.Br(),
