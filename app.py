@@ -6,11 +6,16 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='Where do you want to go?'
-tabtitle = 'Travel'
-list_of_options=['San Francisco', 'Patagonia', 'Sydney', 'Cape Town', 'Paris']
-list_of_images=['sf.jpeg', 'patagonia.jpeg', 'sydney.jpg', 'capetown.jpg', 'paris.jpg', 'airplane.jpg']
-sourceurl = 'https://www.tripadvisor.com/'
+myheading1='Where Should You Eat?'
+tabtitle = 'Restaurant Suggestions'
+list_of_meals = ['Breakfast', 'Lunch', 'Dinner']
+list_of_meal_images=['breakfast.jpeg', 'lunch.jpeg', 'dinner.jpg']
+list_of_meal_options = ['Fast Casual', 'Sit Down', 'Surprise']
+list_of_restaurants= {'Breakfast': {'Fast Casual': "Call Your Mother Deli", 'Sit Down': "Ted's Bulliten", 'Surprise':'Unconventional Diner'},
+                      'Lunch': {'Fast Casual': "Sweetgreen", 'Sit Down': "Logan Tavern", 'Surprise':'Bluestone Lane'},
+                      'Dinner': {'Fast Casual': "Chipotle", 'Sit Down': "Maydan", 'Surprise':'Taqueria Nacional'}},
+list_of_images=['breakfast.jpeg', 'lunch.jpeg', 'dinner.jpg']
+sourceurl = 'https://www.yelp.com/'
 githublink = 'https://github.com/mgeisreiter/dash-callbacks-radio'
 
 
@@ -29,11 +34,9 @@ app.layout = html.Div(children=[
     dcc.RadioItems(
         id='your_input_here',
         options=[
-                {'label':list_of_options[0], 'value':list_of_images[0]},
-                {'label':list_of_options[1], 'value':list_of_images[1]},
-                {'label':list_of_options[2], 'value':list_of_images[2]},
-                {'label':list_of_options[3], 'value':list_of_images[3]},
-                {'label':list_of_options[4], 'value':list_of_images[4]},
+                {'label':list_of_meal_options[0], 'value':list_of_restaurants[0]},
+                {'label':list_of_meal_options[1], 'value':list_of_restaurants[1]},
+                {'label':list_of_meal_options[2], 'value':list_of_restaurants[2]},
                 ],
         value=list_of_images[5],
         ),
